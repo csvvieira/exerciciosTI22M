@@ -11,11 +11,25 @@ namespace Exercicios
         //Área de variáveis
         private double area;
         private double IMC;
+        private double lado;
+        private int hora;
+        private double porcentagem;
+        private double km;
+        private int potencia;
+        private double tempo;
+        private double tempi;
         //Método Construtor 
         public ExerciciosModel()
         {
             this.area = 0;
             this.IMC = 0;
+            this.lado = 0;
+            this.hora = 0;
+            this.porcentagem = 0;
+            this.km = 0;
+            this.potencia = 0;
+            this.tempo = 0;
+            this.tempi = 0;
         }//Fim do Construtor
 
         //Método GET e SET
@@ -29,6 +43,48 @@ namespace Exercicios
         {
             get { return this.IMC; }
             set { this.IMC = value; }
+        }//Fim do GET e SET
+
+        public double ModificarLado
+        {
+            get { return this.lado; }
+            set { this.lado = value; }
+        }//Fim do GET e SET
+
+        public int ModificarHora
+        {
+            get { return this.hora; }
+            set { this.hora = value; }
+        }//Fim do GET e SET
+
+        public double ModificarPorcentagem
+        {
+            get { return this.porcentagem; }
+            set { this.porcentagem = value; }
+        }//Fim do GET e SET
+
+        public double ModificarKm
+        {
+            get { return this.km; }
+            set { this.km = value; }
+        }//Fim do GET e SET
+
+        public int ModificarPotencia
+        {
+            get { return this.potencia;}
+            set { this.potencia = value;}
+        }//Fim do GET e SET
+
+        public double ModificarTempo
+        {
+            get { return this.tempo; }
+            set { this.tempo = value; }
+        }//Fim do GET e SET
+
+        public double ModificarTempi
+        {
+            get { return this.tempi; }
+            set { this.tempi = value; }
         }//Fim do GET e SET
 
         //1. Leia um número e exiba o seu triplo
@@ -48,6 +104,62 @@ namespace Exercicios
         {
             return dolares * 5.40;
         }//Fim do Método
+
+        //4. Calcule o perímetro de um quadrado com base no lado
+        public double PerimetroQuadrado(double lado)
+        {
+            if (lado > 0)
+            {
+                ModificarLado = lado * 4;
+            }
+            else
+            {
+                ModificarLado = -1;
+            }
+            return ModificarLado;
+        }//Fim do Método
+
+        //5.Converta o valor em horas para minutos
+        public int HoraMinuto(int hora)
+        {
+            if (hora > 0)
+            {
+                ModificarHora = hora * 60;
+            }
+            else
+            {
+                ModificarHora = -1;
+            }
+            return ModificarHora;
+        }//Fim do método
+
+        //6.Leia um valor e exiba 10% dele
+        public double PorcentagemDez(double porcentagem)
+        {
+            if(porcentagem > 0)
+            {
+                ModificarPorcentagem = porcentagem * 0.1;
+            }
+            else
+            {
+                ModificarPorcentagem = -1;
+            }
+            return ModificarPorcentagem;
+        }//Fim do método
+
+        //7.Leia um valor e exiba 25% dele
+        public double PorcentagemVinteCinco(double porcentagem)
+        {
+            if(porcentagem > 0)
+            {
+                ModificarPorcentagem = porcentagem * 0.25;
+            }
+            else
+            {
+                ModificarPorcentagem= -1;
+            }
+            return ModificarPorcentagem;
+        }//Fim do método
 
         //8.Calcule a área de um losango com base nas diagonais
         //Área = (diagonalMaior * diagonalMenor) / 2
@@ -78,6 +190,70 @@ namespace Exercicios
                 return -1;
             }//Fim do if/else
         }//Fim do Método
+
+        //10.Leia um número e exiba seu valor absoluto
+        public int ValorAbsoluto(int num)
+        {
+            if (num < 0)
+            {
+                return num * -1;
+            }
+            else
+            {
+                return num;
+            }
+        }//Fim do método
+
+        //11.Converta um valor de quilômetros para metros
+        public double QuilometrosMetros(double km)
+        {
+            if(km > 0)
+            {
+                ModificarKm = km * 1000;
+            }
+            else
+            {
+                ModificarKm = -1;
+            }
+            return ModificarKm;
+        }//Fim do método
+
+        //12.Leia um número e exiba a sua quinta potência
+        public int QuintaPotencia(int num)
+        {
+            if (num > 0)
+            {
+                ModificarPotencia = (int)Math.Pow(num, 5);
+            }
+            else
+            {
+                ModificarPotencia = -1;
+            }
+            return ModificarPotencia;
+        }//Fim do método
+
+        //13.Calcule o tempo de uma viagem com base na distância e velocidade
+        public double TempoViagem(int distancia, int velocidade)
+        {
+            if (ModificarTempi > 1)
+            {
+                ModificarTempi = 1;
+            }
+            else
+            {
+                ModificarTempi = -1;
+            }
+            return ModificarTempi;
+            if (distancia > 0 && velocidade > 0)
+            {
+                ModificarTempo = distancia / velocidade * 60;
+            }
+            else
+            {
+                ModificarTempo = -1;
+            }
+            return ModificarTempo;
+        }//Fim do método
 
         //16. Leia a altura e o pseo de uma pessoa e calcule o IMC
         //Se IMC < 18.5 - Abaixo do Peso
