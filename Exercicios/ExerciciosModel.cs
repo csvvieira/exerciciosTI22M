@@ -17,7 +17,10 @@ namespace Exercicios
         private double km;
         private int potencia;
         private double tempo;
-        private double tempi;
+        private double consumo;
+        public int fatorial;
+        public int segundo;
+
         //Método Construtor 
         public ExerciciosModel()
         {
@@ -29,7 +32,8 @@ namespace Exercicios
             this.km = 0;
             this.potencia = 0;
             this.tempo = 0;
-            this.tempi = 0;
+            this.consumo = 0;
+            this.segundo = 0;
         }//Fim do Construtor
 
         //Método GET e SET
@@ -50,7 +54,7 @@ namespace Exercicios
             get { return this.lado; }
             set { this.lado = value; }
         }//Fim do GET e SET
-
+        
         public int ModificarHora
         {
             get { return this.hora; }
@@ -81,10 +85,22 @@ namespace Exercicios
             set { this.tempo = value; }
         }//Fim do GET e SET
 
-        public double ModificarTempi
+        public double ModificarConsumo
         {
-            get { return this.tempi; }
-            set { this.tempi = value; }
+            get { return this.consumo; }
+            set { this.consumo = value; }
+        }//Fim do GET e SET
+
+        public int ModificarFatorial
+        {
+            get { return this.fatorial; }
+            set { this.fatorial = value;}
+        }//Fim do GET e SET
+
+        public int ModificarSegundo
+        {
+            get { return this.segundo; }
+            set { this.segundo = value; }
         }//Fim do GET e SET
 
         //1. Leia um número e exiba o seu triplo
@@ -233,17 +249,8 @@ namespace Exercicios
         }//Fim do método
 
         //13.Calcule o tempo de uma viagem com base na distância e velocidade
-        public double TempoViagem(int distancia, int velocidade)
+        public double TempoViagem(double distancia, double velocidade)
         {
-            if (ModificarTempi > 1)
-            {
-                ModificarTempi = 1;
-            }
-            else
-            {
-                ModificarTempi = -1;
-            }
-            return ModificarTempi;
             if (distancia > 0 && velocidade > 0)
             {
                 ModificarTempo = distancia / velocidade * 60;
@@ -253,6 +260,38 @@ namespace Exercicios
                 ModificarTempo = -1;
             }
             return ModificarTempo;
+        }//Fim do método
+
+        //14. Calcule o consumo médio de combustível com base em km e litros
+        public double ConsumoMedio(double km, double litros)
+        {
+            if(km > 0 && litros > 0)
+            {
+                ModificarConsumo = km / litros;
+            }
+            else
+            {
+                ModificarConsumo = -1;
+            }
+            return ModificarConsumo;
+        }//Fim do método
+
+        //15. Leia o número 5 e calcule seu fatorial
+        public double FatorialCinco(int num)
+        {
+            if (num == 5)
+            {
+                num *= (5 - 1);
+                num *= 3;
+                num *= (3 - 1);
+                num *= 1;
+                ModificarFatorial = num;
+            }
+            else
+            {
+                ModificarFatorial = -1;
+            }
+            return ModificarFatorial;
         }//Fim do método
 
         //16. Leia a altura e o pseo de uma pessoa e calcule o IMC
@@ -301,5 +340,104 @@ namespace Exercicios
             }//Fim do if/else validação
             return resultado;
         }//Fim do Método
+
+        //17.Calcule o salário anual com base no salário mensal
+        public double SalarioAnual(double salario)
+        {
+            if (salario > 0)
+            {
+                return salario * 12;
+            }
+            else
+            {
+                return -1;
+            }
+        }//Fim do método
+
+        //18.Leia um número e exiba seu logaritmo natural
+        public double LogaritmoNatural(double num1)
+        {
+            if (num1 > 0)
+            {
+                return Math.Log(num1);
+            }
+            else
+            {
+                return -1;
+            }
+        }//Fim do método
+
+        //19.Leia um número e exiba seu seno
+        public double Seno(double catetoOposto, double hipotenusa)
+        {
+            if (catetoOposto > 0 && hipotenusa > 0 && catetoOposto < hipotenusa)
+            {
+                return catetoOposto / hipotenusa;
+            }
+            else
+            {
+                return -1;
+            }
+        }//Fim do método
+
+        //20.Leia um número e exiba seu cosseno
+        public double Cosseno(double catetoAdjacente, double hipotenusa)
+        {
+            if (catetoAdjacente > 0 && hipotenusa > 0 && catetoAdjacente < hipotenusa)
+            {
+                return catetoAdjacente / hipotenusa;
+            }
+            else
+            {
+                return -1;
+            }
+        }//Fim do método
+        
+        //21.Calcule a área de um trapézio com base na base maior, base menor e altura
+        public double AreaTrapezio(double baseMaior, double baseMenor, double altura)
+        {
+            if (baseMaior > 0 && baseMenor > 0 && altura > 0 && baseMenor < baseMaior)
+            {
+                return (baseMaior + baseMenor) * altura / 2;
+            }
+            else
+            {
+                return -1;
+            }
+        }//Fim do método
+
+        //22.Converta um valor de dias para segundos
+        public int DiasSegundos(int dias)
+        {
+            if (dias > 0)
+            {
+                dias *= 24;
+                dias *= 60;
+                dias *= 60;
+                ModificarSegundo = dias;
+            }
+            else
+            {
+                ModificarSegundo = -1;
+            }
+            return ModificarSegundo;
+        }//Fim do método
+
+        //23.Leia um número e exiba a soma dos seus dígitos
+        public int ContarLetras(int num)
+        {
+            int somar = 0;
+            //Validação
+            if (num < 0)
+            {
+                num = num * -1;
+            }
+            string numero = "" + num;
+            for (int i = 0; i < numero.Length; i++)
+            {
+                somar += Convert.ToInt32(numero.Substring(i, 1));
+            }
+            return somar;
+        }//Fim do método
     }//Fim da Classe
 }//Fim do Projeto
