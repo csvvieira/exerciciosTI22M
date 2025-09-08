@@ -27,7 +27,9 @@ namespace Exercicios
             Console.WriteLine("\nMenu\n" + "\n0. Sair" + "\n1. Exercício 1" + "\n2. Exercício 2" + "\n3. Exercício 3" + "\n4. Exercício 4" + "\n5. Exercício 5" + 
                               "\n6. Exercício 6" + "\n8. Exercício 8" + "\n9. Exercício 9" + "\n10. Exercício 10" + "\n11. Exercício 11" + "\n12. Exercício 12" + 
                               "\n13. Exercício 13" + "\n14. Exercício 14" + "\n15. Exercício 15" + "\n16. Exercício 16" + "\n17. Exercício 17" + "\n18. Exercício 18" +
-                              "\n19. Exercício 19" + "\n20. Exercício 20" + "\n21. Exercício 21" + "\n22. Exercício 22" + "\n23. Exercício 23");
+                              "\n19. Exercício 19" + "\n20. Exercício 20" + "\n21. Exercício 21" + "\n22. Exercício 22" + "\n23. Exercício 23" + "\n24. Exercício 24 - Vetor" +
+                              "\n25. Exercício 25 - Vetor" + "\n26. Exercício 26 - Vetor" + "\n27. Exercício 27 - Vetor" + "\n28. Exercício 28 - Vetor" + "\n29. Exercício 29 - Vetor" +
+                              "\n30 .Exercício 30 - Vetor" + "\n31. Exercício 31 - Vetor");
             Console.WriteLine("\nQual exercício deseja realizar?");
             ModificarOpcao = Convert.ToInt32(Console.ReadLine());
         }//Fim do MostrarMenu
@@ -258,9 +260,6 @@ namespace Exercicios
                         //Mostrar o resultado
                         Console.WriteLine(modelo.CalcularIMC(peso, altura));
                         break;
-                    default:
-                        Console.WriteLine("Opção escolhida não é válida!!!");
-                        break;
                     case 17:
                         Console.WriteLine("\nExercício 17");
                         Console.WriteLine("Informe seu salário mensal: ");
@@ -367,8 +366,59 @@ namespace Exercicios
                         //Mostrar o resultado
                         Console.WriteLine($"A soma dos dígitos é: {modelo.ContarLetras(num)}");
                         break;
-                    case 24:
 
+                    //##### Vetores #####
+                    case 24:
+                        Console.WriteLine("\nExercício 24");
+                        //Mostrar
+                        modelo.PreencherVetor();
+                        break;
+                    case 25:
+                        Console.WriteLine("\nExercício 25");
+                        //Mostrar
+                        modelo.ConsultarVetor();
+                        break;
+                    case 26:
+                        Console.WriteLine("\nExercício 26");
+                        //mostrar
+                        Console.WriteLine("Informe o número que deseja procurar: ");
+                        num = Convert.ToInt32(Console.ReadLine());
+                        //Buscar no método
+                        modelo.BuscarNumero(num);
+                        break;
+                    case 27:
+                        Console.WriteLine("\nExercício 27");
+                        //Mostrar
+                        modelo.PreencherVetor();
+                        break;
+                    case 28:
+                        Console.WriteLine("\nExercício 28");
+                        modelo.PreencherVetor();
+                        Console.WriteLine("\nVetor na ordem inversa: ");
+                        modelo.OrdemInversa();
+                        break;
+                    case 29:
+                        Console.WriteLine("\nExercício 29");
+                        modelo.PreencherVetor();
+                        Console.WriteLine("\nOs números pares são: ");
+                        modelo.VetorPares();
+                        break;
+                    case 30:
+                        Console.WriteLine("\nExercício 30");
+                        modelo.PreencherVetor();
+                        modelo.VetorMedia();
+                        break;
+                    case 31:
+                        Console.WriteLine("\nExercício 31");
+                        modelo.VetorString();
+                        Console.WriteLine("\nOs nomes que começam com A são: ");
+                        modelo.VetorA();
+                        break;
+
+
+                    default:
+                        Console.WriteLine("Opção escolhida não é válida!");
+                        break;
                 }//Fim do switch
             } while (ModificarOpcao != 0);
         }//Fim do ExecutarMenu

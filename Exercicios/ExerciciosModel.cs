@@ -20,6 +20,8 @@ namespace Exercicios
         private double consumo;
         public int fatorial;
         public int segundo;
+        public int[] num;//Estrutura de dados finita
+        public string[] nome;
 
         //Método Construtor 
         public ExerciciosModel()
@@ -34,6 +36,8 @@ namespace Exercicios
             this.tempo = 0;
             this.consumo = 0;
             this.segundo = 0;
+            this.num = new int[10];//De 0 até 9
+            this.nome = new string[10];
         }//Fim do Construtor
 
         //Método GET e SET
@@ -438,6 +442,94 @@ namespace Exercicios
                 somar += Convert.ToInt32(numero.Substring(i, 1));
             }
             return somar;
+        }//Fim do método
+
+        //##### VETORES #####
+        //Preenchendo o vetor
+        public void PreencherVetor()
+        {
+            for(int i = 0; i < 10; i++)
+            {
+                Console.Write(i + 1 + "º Número: ");
+                num[i] = Convert.ToInt32(Console.ReadLine());
+            }//Fim do for
+        }//Fim do método
+
+        //Método consultar
+        public void ConsultarVetor()
+        {
+            for(int i = 0; i < 10; i++)
+            {
+                Console.WriteLine($"{i + 1} º Número: {num[i]}");
+            }
+        }//Fim do método
+
+        public void BuscarNumero(int num)
+        {
+            Boolean flag = false;
+            for(int i = 0; i < 10; i++)
+            {
+                if (this.num[i] == num)
+                {
+                    flag = true;
+                    Console.WriteLine($"O número {num} está na posição: {i + 1}");
+                }
+            }
+            if (flag == false)
+            {
+                Console.WriteLine($"O número {num} não está no vetor!");
+            }//Fim da validação booleana
+        }//Fim do método
+
+        public void OrdemInversa()
+        {
+            for(int i = 9; i >= 0; i--)
+            {
+                Console.WriteLine($"{i + 1} º Número: {num[i]}");
+            }//Fim do for
+        }//Fim do método
+
+        public void VetorPares()
+        {
+            for(int i = 0; i < 10; i++) 
+            {
+                if (num[i] % 2 == 0)
+                {
+                    Console.WriteLine($"{num[i]} é par!");
+                }//Fim do if
+            }//Fim do for
+        }//Fim do método
+
+        public void VetorMedia()
+        {
+            double soma = 0;
+            double media = 0;
+            for(int i = 0; i < 10; i++)
+            {
+                soma += num[i];
+            }//Fim do for
+            media = soma / 10;
+            Console.WriteLine($"A média dos números é: {media}");
+        }//Fim do método
+
+        public void VetorString()
+        {
+            for (int i = 0; i < 10; i++)
+            {
+                Console.Write(i + 1 + "º Nome: ");
+                nome[i] = Convert.ToString(Console.ReadLine());
+            }//Fim do for
+        }//Fim do método
+
+        public void VetorA()
+        {
+            for(int i = 0; i < 10; i++)
+            {
+                if (nome[i].Substring(0,1) == "a" || nome[i].Substring(0,1) == "A")
+                {
+                    Console.WriteLine(nome[i]);
+                }//Fim da validação
+            }//Fim do for
         }//Fim do método
     }//Fim da Classe
 }//Fim do Projeto
