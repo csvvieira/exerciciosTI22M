@@ -6,3 +6,11 @@ C:\Users\caio.svieira2\source\repos\Exercicios\Exercicios\obj\Debug\Exercicios.c
 C:\Users\caio.svieira2\source\repos\Exercicios\Exercicios\obj\Debug\Exercicios.csproj.CoreCompileInputs.cache
 C:\Users\caio.svieira2\source\repos\Exercicios\Exercicios\obj\Debug\Exercicios.exe
 C:\Users\caio.svieira2\source\repos\Exercicios\Exercicios\obj\Debug\Exercicios.pdb
+C:\Users\caio.svieira2\source\repos\exerciciosTI22M\Exercicios\bin\Debug\Exercicios.exe.config
+C:\Users\caio.svieira2\source\repos\exerciciosTI22M\Exercicios\bin\Debug\Exercicios.exe
+C:\Users\caio.svieira2\source\repos\exerciciosTI22M\Exercicios\bin\Debug\Exercicios.pdb
+C:\Users\caio.svieira2\source\repos\exerciciosTI22M\Exercicios\obj\Debug\Exercicios.csproj.AssemblyReference.cache
+C:\Users\caio.svieira2\source\repos\exerciciosTI22M\Exercicios\obj\Debug\Exercicios.exe.config
+C:\Users\caio.svieira2\source\repos\exerciciosTI22M\Exercicios\obj\Debug\Exercicios.csproj.CoreCompileInputs.cache
+C:\Users\caio.svieira2\source\repos\exerciciosTI22M\Exercicios\obj\Debug\Exercicios.exe
+C:\Users\caio.svieira2\source\repos\exerciciosTI22M\Exercicios\obj\Debug\Exercicios.pdb

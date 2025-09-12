@@ -29,7 +29,8 @@ namespace Exercicios
                               "\n13. Exercício 13" + "\n14. Exercício 14" + "\n15. Exercício 15" + "\n16. Exercício 16" + "\n17. Exercício 17" + "\n18. Exercício 18" +
                               "\n19. Exercício 19" + "\n20. Exercício 20" + "\n21. Exercício 21" + "\n22. Exercício 22" + "\n23. Exercício 23" + "\n24. Exercício 24 - Vetor" +
                               "\n25. Exercício 25 - Vetor" + "\n26. Exercício 26 - Vetor" + "\n27. Exercício 27 - Vetor" + "\n28. Exercício 28 - Vetor" + "\n29. Exercício 29 - Vetor" +
-                              "\n30 .Exercício 30 - Vetor" + "\n31. Exercício 31 - Vetor");
+                              "\n30 .Exercício 30 - Vetor" + "\n31. Exercício 31 - Vetor" + "\n32. Exercício 32 - Vetor" + "\n33. Exercício 33 - Vetor" + "\n34. Exercício 34 - Vetor" + 
+                              "\n35. Exercício 35 - Vetor" + "\n36. Exercício 36 - Vetor" + "\n37. Exercício 37 - Vetor" + "\n38. Exercício 38 - Vetor" + "\n39. Exercício 39 - Vetor");
             Console.WriteLine("\nQual exercício deseja realizar?");
             ModificarOpcao = Convert.ToInt32(Console.ReadLine());
         }//Fim do MostrarMenu
@@ -414,6 +415,46 @@ namespace Exercicios
                         Console.WriteLine("\nOs nomes que começam com A são: ");
                         modelo.VetorA();
                         break;
+                    case 32:
+                        Console.WriteLine("\nExercício 32");
+                        modelo.PreencherVetor();
+                        Console.WriteLine("\nNúmeros acima da média:");
+                        modelo.MaiorMedia();
+                        break;
+                    case 33:
+                        Console.WriteLine("\nExercício 33");
+                        modelo.PreencherIdade();
+                        modelo.MaiorIdade();
+                        break;
+                    case 34:
+                        Console.WriteLine("\nExercício 34");
+                        modelo.PreencherAltura();
+                        modelo.MediaAltura();
+                        break;
+                    case 35:
+                        Console.WriteLine("\nExercício 35");
+                        modelo.PreencherSalario();
+                        Console.WriteLine("\nOs salários acima de R$1200,00 são: ");
+                        modelo.ExibaSalarios();
+                        break;
+                    case 36:
+                        Console.WriteLine("\nExercício 36");
+                        modelo.PreencherVetor();
+                        Console.WriteLine("\nOs múltiplos de 5 são: ");
+                        modelo.MultiploCinco();
+                        break;
+                    case 37:
+                        Console.WriteLine("\nExercício 37");
+                        modelo.PreencherVetor();
+                        modelo.ImparPar();
+                        break;
+                    case 38:
+                        Console.WriteLine("\nExercício 38");
+                        modelo.PreencherVetor();
+                        Console.WriteLine("\nNúmeros ordenados do maior para o menor: ");
+                        modelo.MaiorMenor();
+                        break;
+
 
 
                     default:

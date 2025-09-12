@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -22,6 +23,9 @@ namespace Exercicios
         public int segundo;
         public int[] num;//Estrutura de dados finita
         public string[] nome;
+        public double []vet;
+        public int[] pares;
+        public int[] impares;
 
         //Método Construtor 
         public ExerciciosModel()
@@ -38,6 +42,9 @@ namespace Exercicios
             this.segundo = 0;
             this.num = new int[10];//De 0 até 9
             this.nome = new string[10];
+            this.vet = new double[10];
+            this.pares = new int[10];
+            this.impares = new int[10];
         }//Fim do Construtor
 
         //Método GET e SET
@@ -529,6 +536,175 @@ namespace Exercicios
                 {
                     Console.WriteLine(nome[i]);
                 }//Fim da validação
+            }//Fim do for
+        }//Fim do método
+
+        public void MaiorMedia()
+        {
+            double soma = 0;
+            double media = 0;
+            double acimaMedia = 0;
+            for (int i = 0; i < 10; i++)
+            {
+                soma += num[i];   
+            }//Fim do for
+            media = soma / 10;
+            for (int i = 0; i < 10; i++)
+            {
+                if (num[i] > media)
+                {
+                    acimaMedia += 1;
+                }//fim do if
+            }//Fim do for
+            Console.WriteLine($"Existem {acimaMedia} números acima da média");
+        }//Fim do método
+
+        public void PreencherIdade()
+        {
+            for (int i = 0; i < 10; i++)
+            {
+                do
+                {
+                    Console.Write(i+1 + "ª Idade: ");
+                    num[i] = Convert.ToInt32(Console.ReadLine());
+                    if (num[i] <= 0)
+                    {
+                        Console.WriteLine("Valor necessita ser maior do que zero!");
+                    }//Fim do if
+                } while (num[i] < 0); //Fim do do-while
+            }//Fim do for
+        }//Fim do método
+
+        public void MaiorIdade()
+        {
+            int idadeMaior = 0;
+            for(int i = 0; i < 10; i++)
+            {
+                if (i == 0)
+                {
+                    idadeMaior = num[i];
+                } //Fim do if
+                if (num[i] > idadeMaior)
+                {
+                    idadeMaior = num[i];
+                }//Fim do if
+            }//Fim do for
+            Console.WriteLine($"A maior idade presente é: {idadeMaior} anos");
+        }//Fim do método
+
+        public void PreencherAltura()
+        {
+            for(int i = 0; i < 10; i++)
+            {
+                do
+                {
+                    Console.Write(i + 1 + "ª Altura: ");
+                    vet[i] = Convert.ToDouble(Console.ReadLine());
+                    if(vet[i] <= 0)
+                    {
+                        Console.WriteLine("Valor necessita ser maior do que zero!");
+                    }//Fim do if
+                } while (vet[i] < 0); //Fim do do-while
+            }//Fim do for
+        }//Fim do método
+
+        public void MediaAltura()
+        {
+            double soma = 0;
+            double media = 0;
+            for(int i = 0; i < 10; i++)
+            {
+                soma += vet[i];
+            }//Fim do método
+            media = soma / 10;
+            Console.WriteLine($"A média das alturas é {media}");
+        }//Fim do método
+
+        public void PreencherSalario()
+        {
+            for(int i = 0; i < 10; i++)
+            {
+                do
+                {
+                    Console.Write(i + 1 + "º Salário: ");
+                    vet[i] = Convert.ToDouble(Console.ReadLine());
+                    if( vet[i] <= 0)
+                    {
+                        Console.WriteLine("Valor necessita ser maior que zero!");
+                    }//Fim do if
+                } while (vet[i] < 0);//Fim do do-while
+            }//Fim do for
+        }//Fim do método
+
+        public void ExibaSalarios()
+        {
+            for (int i = 0; i < 10; i++)
+            {
+                if( vet[i] > 1200)
+                {
+                    Console.WriteLine($"R${vet[i]}");
+                }//Fim do if
+            }//Fim do for
+        }//fim do método
+
+        public void MultiploCinco()
+        {
+            for(int i = 0; i < 10; i++) 
+            {
+                if (num[i] % 5 == 0)
+                {
+                    Console.WriteLine(num[i]);
+                }//Fim do if
+            }//Fim do for
+        }//Fim do método
+
+        public void ImparPar()
+        {
+            int impar = 0;
+            int par = 0;
+            for(int i = 0; i < 10; i++)
+            {
+                if (num[i] % 2 != 0)
+                {
+                    impares[impar] = num[i];
+                    impar++;
+                }//Fim do if
+                else
+                {
+                    pares[par] = num[i];
+                    par++;
+                }//Fim do if
+            }//Fim do for
+            Console.WriteLine("\nOs números ímpares são: ");
+            for (int i = 0; i < impar; i++)
+            {   
+                Console.WriteLine($"{impares[i]} é ímpar");
+            }
+            Console.WriteLine("\nOs números pares são: ");
+            for (int i = 0; i < par; i++)
+            {   
+                Console.WriteLine($"{pares[i]} é par");
+            }
+        }//Fim do método
+
+        public void MaiorMenor()
+        {
+            int aux = 0;
+            for(int i = 1; i < 10; i++)
+            {
+                for (int j = 0; j < 10; j++)
+                {
+                    if (num[i] > num[j])
+                    {
+                        aux = num[i];
+                        num[i] = num[j];
+                        num[j] = aux;
+                    }//Fim do if
+                }//Fim do for J
+            }//Fim do for I
+            for(int i = 0; i < 10; i++)
+            {
+                Console.WriteLine($"{i + 1}º: {num[i]}");
             }//Fim do for
         }//Fim do método
     }//Fim da Classe
