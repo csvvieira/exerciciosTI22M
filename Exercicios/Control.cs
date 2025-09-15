@@ -30,7 +30,9 @@ namespace Exercicios
                               "\n19. Exercício 19" + "\n20. Exercício 20" + "\n21. Exercício 21" + "\n22. Exercício 22" + "\n23. Exercício 23" + "\n24. Exercício 24 - Vetor" +
                               "\n25. Exercício 25 - Vetor" + "\n26. Exercício 26 - Vetor" + "\n27. Exercício 27 - Vetor" + "\n28. Exercício 28 - Vetor" + "\n29. Exercício 29 - Vetor" +
                               "\n30 .Exercício 30 - Vetor" + "\n31. Exercício 31 - Vetor" + "\n32. Exercício 32 - Vetor" + "\n33. Exercício 33 - Vetor" + "\n34. Exercício 34 - Vetor" + 
-                              "\n35. Exercício 35 - Vetor" + "\n36. Exercício 36 - Vetor" + "\n37. Exercício 37 - Vetor" + "\n38. Exercício 38 - Vetor" + "\n39. Exercício 39 - Vetor");
+                              "\n35. Exercício 35 - Vetor" + "\n36. Exercício 36 - Vetor" + "\n37. Exercício 37 - Vetor" + "\n38. Exercício 38 - Vetor" + "\n39. Exercício 39 - Vetor" +
+                              "\n40. Exercício 40 - Vetor" + "\n41. Exercício 41 - Vetor" + "\n42. Exercício 42 - Vetor" + "\n43. Exercício 43 - Vetor" + "\n44. Exercício 44 - Vetor" +
+                              "\n45. Exercício 45 - Vetor" + "\n46. Exercício 46 - Vetor");
             Console.WriteLine("\nQual exercício deseja realizar?");
             ModificarOpcao = Convert.ToInt32(Console.ReadLine());
         }//Fim do MostrarMenu
@@ -454,6 +456,53 @@ namespace Exercicios
                         Console.WriteLine("\nNúmeros ordenados do maior para o menor: ");
                         modelo.MaiorMenor();
                         break;
+                    case 39:
+                        Console.WriteLine("\nExercício 39");
+                        modelo.PreencherVetor();
+                        Console.WriteLine("\nNúmeros repetidos: ");
+                        modelo.NumeroRepetido();
+                        break;
+                    case 40:
+                        Console.WriteLine("\nExercício 40");
+                        Console.WriteLine("Preencha o Primeiro Vetor:");
+                        modelo.PreencherVetor();
+                        Console.WriteLine("\nPreencha o Segundo Vetor: ");
+                        modelo.PreencherDois();
+                        Console.WriteLine("\nSoma dos dois vetores: ");
+                        modelo.SomaVetores();
+                        break;
+                    case 41:
+                        Console.WriteLine("\nExercício 41");
+                        Console.WriteLine("Preencha o Primeiro Vetor:");
+                        modelo.PreencherVetor();
+                        Console.WriteLine("\nPreencha o Segundo Vetor: ");
+                        modelo.PreencherDois();
+                        Console.WriteLine("\nMultiplicação dos dois vetores: ");
+                        modelo.MultiplicacaoVetores();
+                        break;
+                    case 42:
+                        Console.WriteLine("\nExercício 42");
+                        modelo.PreencherVetor();
+                        Console.WriteLine("\nSoma dos elementos do vetor: ");
+                        modelo.SomaVetor();
+                        break;
+                    case 43:
+                        Console.WriteLine("\nExercício 43");
+                        modelo.PreencherVetor();
+                        Console.WriteLine("\nMaior número e sua posição: ");
+                        modelo.MaiorPosicao();
+                        break;
+                    case 44:
+                        Console.WriteLine("\nExercício 44");
+                        Console.WriteLine("\nPreencha o vetor com o nome dos alunos: ");
+                        modelo.VetorString();
+                        Console.WriteLine("\nPreencha o vetor com a nota dos alunos: ");
+                        modelo.PreencherNota();
+                        Console.WriteLine("\nAlunos com nota acima de 7: ");
+                        modelo.AcimaSete();
+                        break;
+
+                    
 
 
 

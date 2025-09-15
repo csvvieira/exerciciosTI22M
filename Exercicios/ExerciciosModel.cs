@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -22,6 +23,8 @@ namespace Exercicios
         public int fatorial;
         public int segundo;
         public int[] num;//Estrutura de dados finita
+        public int[] num1;
+        public int[] num2;
         public string[] nome;
         public double []vet;
         public int[] pares;
@@ -41,10 +44,13 @@ namespace Exercicios
             this.consumo = 0;
             this.segundo = 0;
             this.num = new int[10];//De 0 até 9
+            this.num1 = new int[10];
+            this.num2 = new int[10];
             this.nome = new string[10];
             this.vet = new double[10];
             this.pares = new int[10];
             this.impares = new int[10];
+
         }//Fim do Construtor
 
         //Método GET e SET
@@ -705,6 +711,125 @@ namespace Exercicios
             for(int i = 0; i < 10; i++)
             {
                 Console.WriteLine($"{i + 1}º: {num[i]}");
+            }//Fim do for
+        }//Fim do método
+
+        public void NumeroRepetido()
+        {
+            for(int i = 0; i < 9; i++)
+            {
+                for(int j = i + 1; j < 10; j++)
+                {
+                    if(num[i] == num[j])
+                    {
+                        Console.WriteLine(num[i]);
+                    }//Fim do if
+                }//Fim do for
+            }//Fim do for
+        }//Fim do método
+
+        public void PreencherDois()
+        {
+            for (int i = 0; i < 10; i++)
+            {
+                Console.Write(i + 1 + "º Número: ");
+                num1[i] = Convert.ToInt32(Console.ReadLine());
+            }//Fim do for
+        }//Fim do método
+
+        public void SomaVetores()
+        {
+            int soma = 0;
+            for(int i = 0; i < 10; i++)
+            {
+                soma += num[i];
+                soma += num1[i];
+            }//Fim do for
+            Console.WriteLine(soma);
+        }//Fim do método
+
+        public void MultiplicacaoVetores()
+        {
+            int soma = 0;
+            int soma1 = 0;
+            int multiplicacao = 0;
+            for(int i = 0; i < 10; i++)
+            {
+                soma += num[i];
+            }//Fim do for
+            for(int i = 0; i < 10; i++)
+            {
+                soma1 += num1[i];
+            }//Fim do for
+            multiplicacao = soma * soma1;
+            for(int i = 0; i < 1; i++)
+            {
+                num2[i] = multiplicacao;
+                Console.WriteLine(num2[i]);
+            }//Fim do for
+        }//Fim do método
+
+        public void SomaVetor()
+        {
+            int soma = 0;
+            for(int i = 0; i < 10; i++)
+            {
+                soma += num[i]; 
+            }//Fim do for
+            Console.WriteLine(soma);
+        }//Fim do método
+
+        public void MaiorPosicao()
+        {
+            int posicao = 0;
+            int maior = 0;
+            for(int i = 0; i < 10; i++)
+            {
+                if(i == 0)
+                {
+                    maior = num[i];
+                }//Fim do if
+                if (num[i] > maior)
+                {
+                    maior = num[i];
+                    posicao = i + 1;
+                }//Fim do if
+            }//Fim do for
+            Console.WriteLine("O maior valor dentro do vetor: " + maior);
+            Console.WriteLine("A posição do maior valor é: " + posicao);
+        }//Fim do método
+
+        public void PreencherNota()
+        {
+            for(int i = 0; i < 10; i++)
+            {
+                do
+                {
+                    do
+                    {
+                        Console.Write(i + 1 + "ª Nota: ");
+                        vet[i] = Convert.ToDouble(Console.ReadLine());
+                        if (vet[i] > 10)
+                        {
+                            Console.WriteLine("A nota precisa estar entre 0 e 10!!!");
+                        }//Fim do if                    
+                    } while (vet[i] <= 10);
+                    if (vet[i] < 0)
+                    {
+                        Console.WriteLine("A nota precisa estar entre 0 e 10!!!");
+                    }//Fim do if
+                } while(vet[i] >= 0); //Fim do do-while
+            }//Fim do for
+        }//Fim do método
+
+        public void AcimaSete()
+        {
+            for(int i = 0; i < 10; i++)
+            {
+                if (vet[i] >= 7)
+                {
+                    Console.WriteLine($"O(A) aluno(a) {nome[i]} tem nota {vet[i]}");
+                }//Fim do if
             }//Fim do for
         }//Fim do método
     }//Fim da Classe
