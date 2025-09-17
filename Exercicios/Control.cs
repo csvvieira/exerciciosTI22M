@@ -32,7 +32,8 @@ namespace Exercicios
                               "\n30 .Exercício 30 - Vetor" + "\n31. Exercício 31 - Vetor" + "\n32. Exercício 32 - Vetor" + "\n33. Exercício 33 - Vetor" + "\n34. Exercício 34 - Vetor" + 
                               "\n35. Exercício 35 - Vetor" + "\n36. Exercício 36 - Vetor" + "\n37. Exercício 37 - Vetor" + "\n38. Exercício 38 - Vetor" + "\n39. Exercício 39 - Vetor" +
                               "\n40. Exercício 40 - Vetor" + "\n41. Exercício 41 - Vetor" + "\n42. Exercício 42 - Vetor" + "\n43. Exercício 43 - Vetor" + "\n44. Exercício 44 - Vetor" +
-                              "\n45. Exercício 45 - Vetor" + "\n46. Exercício 46 - Vetor");
+                              "\n45. Exercício 45 - Matriz" + "\n46. Exercício 46 - Matriz" + "\n47. Exercício 47 - Matriz" + "\n48. Exercício 48 - Matriz" + "\n49. Exercício 49 - Matriz" +
+                              "\n50. Exercício 50 - Matriz" + "\n51. Exercício 51 - Matriz" + "\n52. Exercício 52 - Matriz" + "\n53. Exercício 53 - Matriz" + "\n54. Exercício 54 - Matriz");
             Console.WriteLine("\nQual exercício deseja realizar?");
             ModificarOpcao = Convert.ToInt32(Console.ReadLine());
         }//Fim do MostrarMenu
@@ -501,8 +502,51 @@ namespace Exercicios
                         Console.WriteLine("\nAlunos com nota acima de 7: ");
                         modelo.AcimaSete();
                         break;
-
-                    
+                    case 45:
+                        Console.WriteLine("\nExercício 45");
+                        //Preencher a matriz
+                        modelo.PreencherMatriz();
+                        modelo.MostrarMatriz();
+                        break;
+                    case 46:
+                        Console.WriteLine("\nExercício 46");
+                        //Preencher e mostrar a matriz
+                        modelo.PreencherZero();
+                        modelo.MostrarMatriz();
+                        break;
+                    case 47:
+                        Console.WriteLine("\nExercício 47");
+                        modelo.PreencherMatriz();
+                        modelo.SomaMatriz();
+                        break;
+                    case 48:
+                        Console.WriteLine("\nExercício 48");
+                        modelo.PreencherMatrizA();
+                        modelo.MediaMatriz();
+                        break;
+                    case 49:
+                        Console.WriteLine("\nExercício 49");
+                        modelo.PreencherMatriz();
+                        modelo.DiagonalPrincipal();
+                        break;
+                    case 50:
+                        Console.WriteLine("\nExercício 50");
+                        modelo.PreencherMatriz();
+                        modelo.DiagonalSecundaria();
+                        break;
+                    case 51:
+                        Console.WriteLine("\nExercício 51");
+                        modelo.PreencherMatrizA();
+                        modelo.MaiorDez();
+                        break;
+                    case 52:
+                        Console.WriteLine("\nExercício 52");
+                        Console.WriteLine("\nPreencha a primeira matriz: ");
+                        modelo.PreencherMatriz();
+                        Console.WriteLine("\nPreencha a segunda matriz: ");
+                        modelo.PreencherMatriz2();
+                        modelo.SomarMatrizes();
+                        break;
 
 
 
