@@ -24,16 +24,17 @@ namespace Exercicios
 
         public void MostrarMenu()
         {
-            Console.WriteLine("\nMenu\n" + "\n0. Sair" + "\n1. Exercício 1" + "\n2. Exercício 2" + "\n3. Exercício 3" + "\n4. Exercício 4" + "\n5. Exercício 5" + 
-                              "\n6. Exercício 6" + "\n8. Exercício 8" + "\n9. Exercício 9" + "\n10. Exercício 10" + "\n11. Exercício 11" + "\n12. Exercício 12" + 
+            Console.WriteLine("\nMenu\n" + "\n0. Sair" + "\n1. Exercício 1" + "\n2. Exercício 2" + "\n3. Exercício 3" + "\n4. Exercício 4" + "\n5. Exercício 5" +
+                              "\n6. Exercício 6" + "\n8. Exercício 8" + "\n9. Exercício 9" + "\n10. Exercício 10" + "\n11. Exercício 11" + "\n12. Exercício 12" +
                               "\n13. Exercício 13" + "\n14. Exercício 14" + "\n15. Exercício 15" + "\n16. Exercício 16" + "\n17. Exercício 17" + "\n18. Exercício 18" +
                               "\n19. Exercício 19" + "\n20. Exercício 20" + "\n21. Exercício 21" + "\n22. Exercício 22" + "\n23. Exercício 23" + "\n24. Exercício 24 - Vetor" +
                               "\n25. Exercício 25 - Vetor" + "\n26. Exercício 26 - Vetor" + "\n27. Exercício 27 - Vetor" + "\n28. Exercício 28 - Vetor" + "\n29. Exercício 29 - Vetor" +
-                              "\n30 .Exercício 30 - Vetor" + "\n31. Exercício 31 - Vetor" + "\n32. Exercício 32 - Vetor" + "\n33. Exercício 33 - Vetor" + "\n34. Exercício 34 - Vetor" + 
+                              "\n30 .Exercício 30 - Vetor" + "\n31. Exercício 31 - Vetor" + "\n32. Exercício 32 - Vetor" + "\n33. Exercício 33 - Vetor" + "\n34. Exercício 34 - Vetor" +
                               "\n35. Exercício 35 - Vetor" + "\n36. Exercício 36 - Vetor" + "\n37. Exercício 37 - Vetor" + "\n38. Exercício 38 - Vetor" + "\n39. Exercício 39 - Vetor" +
                               "\n40. Exercício 40 - Vetor" + "\n41. Exercício 41 - Vetor" + "\n42. Exercício 42 - Vetor" + "\n43. Exercício 43 - Vetor" + "\n44. Exercício 44 - Vetor" +
                               "\n45. Exercício 45 - Matriz" + "\n46. Exercício 46 - Matriz" + "\n47. Exercício 47 - Matriz" + "\n48. Exercício 48 - Matriz" + "\n49. Exercício 49 - Matriz" +
-                              "\n50. Exercício 50 - Matriz" + "\n51. Exercício 51 - Matriz" + "\n52. Exercício 52 - Matriz" + "\n53. Exercício 53 - Matriz" + "\n54. Exercício 54 - Matriz");
+                              "\n50. Exercício 50 - Matriz" + "\n51. Exercício 51 - Matriz" + "\n52. Exercício 52 - Matriz" + "\n53. Exercício 53 - Matriz" + "\n54. Exercício 54 - Matriz" +
+                              "\n55. Exercício 55 - Matriz" + "\n56. Exercício 56 - Matriz" + "\n57. Exercício 57 - Matriz" + "\n58. Exercício 58 - Matriz" + "\n59. Exercício 59 - Matriz"); 
             Console.WriteLine("\nQual exercício deseja realizar?");
             ModificarOpcao = Convert.ToInt32(Console.ReadLine());
         }//Fim do MostrarMenu
@@ -547,6 +548,45 @@ namespace Exercicios
                         modelo.PreencherMatriz2();
                         modelo.SomarMatrizes();
                         break;
+                    case 53:
+                        Console.WriteLine("\nExercício 53");
+                        Console.WriteLine("\nPreencha a primeira matriz: ");
+                        modelo.PreencherMatrizB();
+                        Console.WriteLine("\nPreencha a segunda matriz: ");
+                        modelo.PreencherMatrizC();
+                        modelo.MultiplicarMatriz();
+                        break;
+                    case 54:
+                        Console.WriteLine("\nExercício 54");
+                        modelo.PreencherMatrizD();
+                        modelo.TrocarLinhas();
+                        Console.WriteLine("\nMatriz com a primeira e a última linha trocada: ");
+                        modelo.MostrarMatrizD();
+                        break;
+                    case 55:
+                        Console.WriteLine("\nExercício 55");
+                        modelo.PreencherMatriz();
+                        modelo.MatrizTransposta();
+                        Console.WriteLine("\nMatriz Transposta: ");
+                        modelo.MostrarMatriz();
+                        break;
+                    case 56:
+                        Console.WriteLine("\nExercício 56");
+                        modelo.PreencherMatriz();
+                        modelo.MaiorValor();
+                        break;
+                    case 57:
+                        Console.WriteLine("Exercício 57");
+                        modelo.PreencherMatrizA();
+                        modelo.MatrizPares();
+                        break;
+                    case 58:
+                        Console.WriteLine("\nExercício 58");
+                        modelo.MatrizTabuada();
+                        modelo.MostrarMatrizE();
+                        break;
+                    
+
 
 
 

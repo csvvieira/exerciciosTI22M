@@ -33,6 +33,10 @@ namespace Exercicios
         public int[,] matriz;//Declarar a matriz
         public int[,] matrizA;
         public int[,] matriz2;
+        public int[,] matrizB;
+        public int[,] matrizC;
+        public int[,] matrizD;
+        public int[,] matrizE;
 
         //Método Construtor 
         public ExerciciosModel()
@@ -57,6 +61,10 @@ namespace Exercicios
             this.matriz = new int[3, 3];
             this.matrizA = new int[4, 4];
             this.matriz2 = new int[3, 3];
+            this.matrizB = new int[2, 2];
+            this.matrizC = new int[2, 2];
+            this.matrizD = new int[5, 5];   
+            this.matrizE = new int[10, 10];
 
         }//Fim do Construtor
 
@@ -870,6 +878,42 @@ namespace Exercicios
             }//Fim do for de linha
         }//Fim do método
 
+        public void PreencherMatrizB()
+        {
+            for(int linha = 0; linha <= 1; linha++)
+            {
+                for(int coluna = 0; coluna <=1; coluna++)
+                {
+                    Console.Write($"Matriz {linha},{coluna}: ");
+                    this.matrizB[linha, coluna] = Convert.ToInt32(Console.ReadLine());
+                }//Fim do for de coluna
+            }//Fim do for de linha
+        }//Fim do método
+
+        public void PreencherMatrizC()
+        {
+            for(int linha = 0; linha <= 1; linha++)
+            {
+                for (int coluna = 0; coluna <= 1; coluna++)
+                {
+                    Console.Write($"Matriz {linha},{coluna}: ");
+                    this.matrizC[linha, coluna] = Convert.ToInt32(Console.ReadLine());
+                }//Fim do for de coluna
+            }//Fim do for de linha
+        }//Fim do método
+
+        public void PreencherMatrizD()
+        {
+            for (int linha = 0; linha <= 4; linha++)
+            {
+                for (int coluna = 0; coluna <= 4; coluna++)
+                {
+                    Console.Write($"Matriz {linha},{coluna}: ");
+                    this.matrizD[linha, coluna] = Convert.ToInt32(Console.ReadLine());
+                }//Fim do for de coluna
+            }//Fim do for de linha
+        }//Fim do método
+
         public void MostrarMatrizA()
         {
             for(int linha = 0; linha <= 3; linha++)
@@ -889,6 +933,30 @@ namespace Exercicios
                 for (int coluna = 0; coluna <= 2; coluna++)
                 {
                     Console.Write($"{matriz[linha, coluna]} ");
+                }//Fim do for de coluna
+                Console.WriteLine("\n");//Pular linha
+            }//Fim do for de linha
+        }//Fim do método
+
+        public void MostrarMatrizD()
+        {
+            for (int linha = 0; linha <= 4; linha++)
+            {
+                for (int coluna = 0; coluna <= 4; coluna++)
+                {
+                    Console.Write($"{matrizD[linha,coluna]} ");
+                }//Fim do for de coluna
+                Console.WriteLine("\n");//Pular linha
+            }//Fim do for de linha
+        }//Fim do método
+
+        public void MostrarMatrizE()
+        {
+            for (int linha = 0; linha <= 9; linha++)
+            {
+                for (int coluna = 0; coluna <= 9; coluna++)
+                {
+                    Console.Write($"{matrizE[linha, coluna],4} ");
                 }//Fim do for de coluna
                 Console.WriteLine("\n");//Pular linha
             }//Fim do for de linha
@@ -1001,6 +1069,106 @@ namespace Exercicios
             }//Fim do for de linha
             somaTotal = soma1 + soma2;
             Console.WriteLine($"\nA soma das matrizes é: {somaTotal}");
+        }//Fim do método
+
+        public void MultiplicarMatriz()
+        {
+            int soma1 = 0;
+            int soma2 = 0;
+            int multiplicacao = 0;
+            for(int linha = 0; linha <= 1; linha++)
+            {
+                for(int coluna = 0; coluna <= 1; coluna++)
+                {
+                    soma1 += matrizB[linha, coluna];
+                    soma2 += matrizC[linha, coluna];
+                }//Fim do for de coluna
+            }//Fim do for de linha
+            multiplicacao = soma1 * soma2;
+            Console.WriteLine($"\nO resultado da multiplicação das matrizes é: {multiplicacao}");
+        }//Fim do método
+
+        public void TrocarLinhas()
+        {
+            int aux = 0;
+            for (int linha = 0; linha <= 4; linha++)
+            {
+                for (int coluna = 0; coluna <= 4; coluna++)
+                {
+                    aux = matrizD[0, coluna];
+                    matrizD[0, coluna] = matrizD[4, coluna];
+                    matrizD[4, coluna] = aux;
+                }//Fim do for de coluna
+            }//Fim do for de linha
+        }//Fim do método
+
+        public void MatrizTransposta()
+        {
+            int aux = 0;
+            for(int linha = 0; linha <= 2; linha++)
+            {
+                for(int coluna = 0; coluna <= 2; coluna++)
+                {
+                    aux = matriz[0, coluna];
+                    matriz[0, coluna] = matriz[0, linha];
+                    matriz[0, linha] = aux;
+                    aux = matriz[1, coluna];
+                    matriz[1, coluna] = matriz[1, linha];
+                    matriz[1, linha] = aux;
+                    aux = matriz[2, coluna];
+                    matriz[2, coluna] = matriz[2, linha];
+                    matriz[2, linha] = aux;
+                }//Fim do for de coluna
+            }//Fim do for de linha
+        }//Fim do método
+
+        public void MaiorValor()
+        {
+            int maiorValor = matriz[0, 0];
+            int posicaoColuna = 0;
+            int posicaoLinha = 0;
+
+            for(int linha = 0; linha <= 2; linha++)
+            {
+                for(int coluna = 0; coluna <= 2; coluna++)
+                {
+                    if (matriz[linha, coluna] > maiorValor)
+                    {
+                        maiorValor = matriz[linha, coluna];
+                        posicaoColuna = coluna;
+                        posicaoLinha = linha;
+                    }//Fim do if
+                }//Fim do for de coluna
+            }//Fim do for de linha
+            Console.WriteLine($"\nO maior valor da matriz é: {maiorValor}.");
+            Console.WriteLine($"Ele está localizado na {posicaoLinha}ª linha e na {posicaoColuna}ª coluna.");
+        }//Fim do método
+
+        public void MatrizPares()
+        {
+            int contarPares = 0;
+            for(int linha = 0; linha <= 3; linha++)
+            {
+                for(int coluna = 0; coluna <= 3; coluna++)
+                {
+                    if (matrizA[linha,coluna] % 2 == 0)
+                    {
+                        contarPares++;
+                    }//Fim do if
+                }//Fim do for de coluna
+            }//Fim do for de linha
+            Console.WriteLine($"\nA quantidade de números pares é: {contarPares}");
+        }//Fim do método
+
+        public void MatrizTabuada()
+        {
+            for(int linha = 0; linha <= 9; linha++)
+            {
+                for(int coluna = 0; coluna <= 9; coluna++)
+                {
+                    matrizE[linha, coluna] = (linha + 1) * (coluna + 1);
+                }//Fim do for de coluna
+            }//Fim do for de linha
         }//Fim do método
     }//Fim da Classe
 }//Fim do Projeto

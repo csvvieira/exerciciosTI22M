@@ -3,11 +3,11 @@
   "WorkspaceRootPath": "C:\\Users\\caio.svieira2\\source\\repos\\exerciciosTI22M\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D8B032B7-7AB6-4FB7-9BC7-6CF6EED0672B}|Exercicios\\Exercicios.csproj|C:\\Users\\caio.svieira2\\source\\repos\\exerciciosTI22M\\exercicios\\control.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D8B032B7-7AB6-4FB7-9BC7-6CF6EED0672B}|Exercicios\\Exercicios.csproj|c:\\users\\caio.svieira2\\source\\repos\\exerciciosti22m\\exercicios\\control.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D8B032B7-7AB6-4FB7-9BC7-6CF6EED0672B}|Exercicios\\Exercicios.csproj|solutionrelative:exercicios\\control.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D8B032B7-7AB6-4FB7-9BC7-6CF6EED0672B}|Exercicios\\Exercicios.csproj|c:\\users\\caio.svieira2\\source\\repos\\exerciciosti22m\\exercicios\\exerciciosmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D8B032B7-7AB6-4FB7-9BC7-6CF6EED0672B}|Exercicios\\Exercicios.csproj|C:\\Users\\caio.svieira2\\source\\repos\\exerciciosTI22M\\exercicios\\exerciciosmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D8B032B7-7AB6-4FB7-9BC7-6CF6EED0672B}|Exercicios\\Exercicios.csproj|solutionrelative:exercicios\\exerciciosmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -32,7 +32,7 @@
               "RelativeDocumentMoniker": "Exercicios\\Control.cs",
               "ToolTip": "C:\\Users\\caio.svieira2\\source\\repos\\exerciciosTI22M\\Exercicios\\Control.cs",
               "RelativeToolTip": "Exercicios\\Control.cs",
-              "ViewState": "AgIAAAACAAAAAAAAAAAAACMCAAAvAAAAAAAAAA==",
+              "ViewState": "AgIAACgCAAAAAAAAAAAAAEkCAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-12T11:21:50.206Z",
               "EditorCaption": ""
@@ -45,7 +45,7 @@
               "RelativeDocumentMoniker": "Exercicios\\ExerciciosModel.cs",
               "ToolTip": "C:\\Users\\caio.svieira2\\source\\repos\\exerciciosTI22M\\Exercicios\\ExerciciosModel.cs",
               "RelativeToolTip": "Exercicios\\ExerciciosModel.cs",
-              "ViewState": "AgIAAMkDAAAAAAAAAAAkwOoDAABFAAAAAAAAAA==",
+              "ViewState": "AgIAAKkDAAAAAAAAAAAIwL4DAAA8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-17T12:35:21.904Z",
               "EditorCaption": ""
